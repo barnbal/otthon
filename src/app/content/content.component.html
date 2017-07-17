@@ -1,0 +1,40 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  <div *ngIf="currentPage == '/'" >
+    <h1 class="page-header">Dashboard</h1>
+
+    <h2 class="sub-header">Section title</h2>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>lastName</th>
+            <th>firstName</th>
+            <th>email</th>
+            <th>phone</th>
+            <th>relatives</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.relatives}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div *ngIf="currentPage == '/reports'">
+    Reports div.
+  </div>
+    <div *ngIf="currentPage == '/analytics'">
+    analytics div.
+  </div>
+    <div *ngIf="currentPage == '/export'">
+    export div.
+  </div>
+</div>
